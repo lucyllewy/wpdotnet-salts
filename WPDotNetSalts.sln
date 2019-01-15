@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28407.52
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "WPDotNetSalts\Server\Server.csproj", "{5EB75930-807F-4641-A515-EFA3424082C8}"
+EndProject
+Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "WPDotNetSalts", "WPDotNetSalts\WPDotNetSalts\WPDotNetSalts.msbuildproj", "{B3EC8459-523F-451D-96E0-C41938FF43C9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5EB75930-807F-4641-A515-EFA3424082C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EB75930-807F-4641-A515-EFA3424082C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EB75930-807F-4641-A515-EFA3424082C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EB75930-807F-4641-A515-EFA3424082C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3EC8459-523F-451D-96E0-C41938FF43C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3EC8459-523F-451D-96E0-C41938FF43C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3EC8459-523F-451D-96E0-C41938FF43C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3EC8459-523F-451D-96E0-C41938FF43C9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C617E2E4-13BB-4A77-9EC4-F807B5E210A5}
+	EndGlobalSection
+EndGlobal
