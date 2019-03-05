@@ -26,7 +26,16 @@ function random_str($length, $keyspace = '0123456789abcdefghijklmnopqrstuvwxyzAB
     return implode('', $pieces);
 }
 
-$keys = ['AUTH_KEY', 'SECURE_AUTH_KEY', 'LOGGED_IN_KEY', 'NONCE_KEY', 'AUTH_SALT', 'SECURE_AUTH_SALT', 'LOGGED_IN_SALT', 'NONCE_SALT'];
+$keys = [
+    'AUTH_KEY',
+    'AUTH_SALT',
+    'LOGGED_IN_KEY',
+    'LOGGED_IN_SALT',
+    'NONCE_KEY',
+    'NONCE_SALT',
+    'SECURE_AUTH_KEY',
+    'SECURE_AUTH_SALT',
+];
 $values = [];
 $maxlength = array_reduce($keys, function($carry, $key, $idx) {
     $len = strlen($key);
