@@ -28,6 +28,13 @@ function random_str($length, $keyspace = '0123456789abcdefghijklmnopqrstuvwxyzAB
 
 $keys = ['AUTH_KEY', 'SECURE_AUTH_KEY', 'LOGGED_IN_KEY', 'NONCE_KEY', 'AUTH_SALT', 'SECURE_AUTH_SALT', 'LOGGED_IN_SALT', 'NONCE_SALT'];
 $values = [];
+$maxlength = array_reduce($keys, function($carry, $key, $idx) {
+    $len = strlen($key);
+    if ($len > $carry) {
+        return $len;
+    }
+    return $carry;
+}, 0);
 
 foreach ($keys as $key) {
 	$values[$key] = random_str( 64 );
@@ -36,22 +43,40 @@ foreach ($keys as $key) {
 <!DOCTYPE html>
 <html>
 <head>
+    <style>
+    body {
+        margin: 0 auto;
+        max-width: 800px;
+    }
+    h1 {
+        text-align: center;
+    }
+    pre {
+        background-color: #f0f0f0;
+        border: 0.1rem dashed #cccccc;
+        padding: 1rem;
+    }
+    pre, h1 {
+        margin: 3rem 0;
+    }
+    </style>
 </head>
 <body>
+<div>
 <h1>WP.Net Salts generator</h1>
 
-<p>Your salts and keys for appsettings.json are below:</p>
+<p>Your salts and keys for WPdotNet appsettings.json are below:</p>
 
 <pre>
 "SALT": {
 <?php while ($key = array_shift($keys)) : ?>
-	"<?php echo $key; ?>": "<?php echo $values[$key]; ?>"<?php if (0 < count($keys)) { echo ','; } ?>
+	"<?php echo $key; ?>":<?php for ($i = strlen($key); $i <= $maxlength; $i++) echo " "; ?>"<?php echo $values[$key]; ?>"<?php if (0 < count($keys)) { echo ','; } ?>
 
 <?php endwhile; ?>
 }
 </pre>
 
 <p>These salts are for use with <a href="https://www.wpdotnet.com/">WPdotNet</a> from <a href="https://www.peachpie.io/">PeachPie PHP Compiler for .NET</a> and <a href="http://www.iolevel.com/">IOLevel</a>. Make your own WordPress site running on .NET using the <a href="https://github.com/iolevel/peachpie-wordpress/">WPdotNet boilerplate at GitHub</a>, which is based on the NuGet packages created from the <a href="https://github.com/iolevel/wpdotnet-sdk">WPdotNet SDK on github</a>.
-
+</div>
 </body>
 </html>
