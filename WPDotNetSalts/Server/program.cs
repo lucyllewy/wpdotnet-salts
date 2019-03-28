@@ -21,26 +21,12 @@ namespace WPDotNetSalts.Server
 
     class Startup
     {
-        public void ConfigureServices(IServiceCollection services)
-        {
-            // Adds a default in-memory implementation of IDistributedCache.
-            services.AddDistributedMemoryCache();
-
-            services.AddSession(options =>
-            {
-                options.IdleTimeout = TimeSpan.FromMinutes(30);
-                options.Cookie.HttpOnly = true;
-            });
-        }
-
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
-
-            app.UseSession();
 
             app.UsePhp(new PhpRequestOptions(scriptAssemblyName: "WPDotNetSalts"));
             app.UseDefaultFiles();
