@@ -72,48 +72,48 @@ if (isset($_GET['raw'])) {
 ?>
 <!DOCTYPE html>
 <html>
-<head>
-    <style>
-    body {
-        display: grid;
-        height: 100vh;
-        margin: 0;
-    }
-    body > div {
-        align-self: center;
-        justify-self: center;
-        width: min-content;
-    }
-    h1 {
-        margin: 0 0 3rem;
-        text-align: center;
-    }
-    pre {
-        background-color: #f0f0f0;
-        border: 0.1rem dashed #cccccc;
-        max-width: 80vw;
-        overflow-x: auto;
-        padding: 1rem;
-    }
-    pre {
-        margin: 3rem 0;
-    }
-    </style>
-</head>
-<body>
-<div>
-<h1>WP.Net Salts generator</h1>
+    <head>
+        <style>
+        body {
+            display: grid;
+            height: 100vh;
+            margin: 0;
+        }
+        body > div {
+            align-self: center;
+            justify-self: center;
+            width: min-content;
+        }
+        h1 {
+            margin: 0 0 3rem;
+            text-align: center;
+        }
+        pre {
+            background-color: #f0f0f0;
+            border: 0.1rem dashed #cccccc;
+            max-width: 80vw;
+            overflow-x: auto;
+            padding: 1rem;
+        }
+        pre {
+            margin: 3rem 0;
+        }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>WP.Net Salts generator</h1>
 
-<p>Your salts and keys for WPdotNet appsettings.json are below:</p>
+            <p>by <a href="https://diddledani.com/">Dani Llewellyn</a></p>
 
-<pre>
-<?php generate_salts(); ?>
-</pre>
+            <h2>Your salts and keys for WPdotNet appsettings.json are below:</h2>
 
-<p>These salts are for use with <a href="https://www.wpdotnet.com/">WPdotNet</a> from <a href="https://www.peachpie.io/">PeachPie PHP Compiler for .NET</a> and <a href="http://www.iolevel.com/">IOLevel</a>. Make your own WordPress site running on .NET using the <a href="https://github.com/iolevel/peachpie-wordpress/">WPdotNet boilerplate at GitHub</a>, which is based on the NuGet packages created from the <a href="https://github.com/iolevel/wpdotnet-sdk">WPdotNet SDK on github</a>.</p>
-<p>The source code for this generator is publically accessible at <a href="https://github.com/diddledan/wpdotnet-salts">GitHub</a>.</p>
-</div>
-</body>
+            <pre><?php generate_salts(); ?></pre>
+
+            <p>These salts are for use with <a href="https://www.wpdotnet.com/">WPdotNet</a> from <a href="https://www.peachpie.io/">PeachPie PHP Compiler for .NET</a> and <a href="https://www.iolevel.com/">IOLevel</a>. Make your own WordPress site running on .NET using the <a href="https://github.com/iolevel/peachpie-wordpress/">WPdotNet boilerplate at GitHub</a>, which is based on the NuGet packages created from the <a href="https://github.com/iolevel/wpdotnet-sdk">WPdotNet SDK on github</a>.</p>
+            <p>The source code for this generator is publically accessible at <a href="https://github.com/diddledani/wpdotnet-salts">GitHub</a>.</p>
+        </div>
+    </body>
 </html>
 <?php
 }
