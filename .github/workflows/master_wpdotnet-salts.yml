@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'wpdotnet-salts'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_2BBC4A35CD4447F198A35932D760C140 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_2C2DBC743D174366B5013233FCCF7C76 }}
           package: .
