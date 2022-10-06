@@ -1,22 +1,13 @@
-﻿<Project Sdk="Peachpie.NET.Sdk/1.0.23">
+﻿<Project Sdk="Peachpie.NET.Sdk/1.1.1">
 
   <PropertyGroup>
     <OutputType>Library</OutputType>
-    <TargetFramework>netstandard2.1</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <AssemblyName>WPDotNetSalts</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="**/*.php" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="**" Exclude="obj/**;bin/**;PublishProfiles/**;@(Compile);$(MsBuildThisFile)">
-      <PackagePath>contentFiles/any/netcoreapp2.0/wwwroot/</PackagePath>
-      <PackageCopyToOutput>true</PackageCopyToOutput>
-      <CopyToOutputDirectory>true</CopyToOutputDirectory>
-      <CopyToPublishDirectory>true</CopyToPublishDirectory>
-    </Content>
+    <Compile Include="**/*.php" Exclude="obj/**;bin/**;" />
   </ItemGroup>
 
 </Project>
